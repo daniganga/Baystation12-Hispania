@@ -141,7 +141,7 @@ SUBSYSTEM_DEF(jobs)
 		to_chat(joining, "<span class='warning'>Desafortunadamente, ese trabajo ya no esta disponible.</span>")
 		return FALSE
 	if(!config.enter_allowed)
-		to_chat(joining, "<span class='warning'>Hay un bloqueo administrativo al ingresar al juego.!</span>")
+		to_chat(joining, "<span class='warning'>Hay un bloqueo administrativo al ingresar al juego!</span>")
 		return FALSE
 	if(SSticker.mode && SSticker.mode.explosion_in_progress)
 		to_chat(joining, "<span class='warning'>La [station_name()] actualmente esta explotando. Unirse iria mal.</span>")
@@ -167,7 +167,7 @@ SUBSYSTEM_DEF(jobs)
 	var/airstatus = IsTurfAtmosUnsafe(spawn_turf)
 	if(airstatus || radlevel > 0)
 		var/reply = alert(spawner, "Advertencia. Su ubicacion de generacion seleccionada parece tener condiciones desfavorables. \
-		Puedes morir poco despues de aparecer.. \
+		Puedes morir poco despues de aparecer. \
 		Aparecer de todos modos? Mas informacion: [airstatus] Radiacion: [radlevel] IU/s", "Advertencia de atmosfera", "Abortar", "Aparecer de todos modos")
 		if(reply == "Abort")
 			return FALSE
